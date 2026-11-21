@@ -8,14 +8,6 @@ name: Windows ARM64
 # rather than on every push to main: a dependency or runner-image change still shows up within a
 # day. PRs that change the Windows packaging itself still run it.
 on:
-  schedule:
-    - cron: "41 4 * * *"
-  push:
-    branches: [release]
-  pull_request:
-    paths:
-      - .github/workflows/windows-arm64.yml
-      - packaging/windows/**
   workflow_dispatch:
 
 concurrency:

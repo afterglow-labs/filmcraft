@@ -10,11 +10,6 @@ name: CI (Windows)
 # Windows. Not the full `cargo xtask ci`: on a cold windows-latest runner that is well over an
 # hour, and its wasm, layering and asset steps don't differ by platform.
 on:
-  push:
-    branches: [main]
-  pull_request:
-    # `labeled`: adding `full-ci` starts it. Other labels skip (see concurrency and the scope job).
-    types: [opened, synchronize, reopened, labeled]
   workflow_dispatch:
 
 permissions:
